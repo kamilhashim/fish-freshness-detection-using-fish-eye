@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fish Freshness Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Fish Freshness Prediction</h1>
+        <p class="description">Upload an image of the fish to determine its freshness level.</p>
+        <form action="/predict" method="post" enctype="multipart/form-data" class="upload-form">
+            <label for="fileInput" class="custom-file-label">Choose an image</label>
+            <input type="file" name="file" id="fileInput" required>
+            <button type="submit" class="btn">Upload and Predict</button>
+        </form>
+    </div>
+</body>
+</html>
